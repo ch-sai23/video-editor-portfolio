@@ -6,16 +6,12 @@
   <title>SAI KIRAN REDDY — Upload Work</title>
 
   <script src="https://unpkg.com/netlify-identity-widget@1.9.2/build/netlify-identity-widget.js"></script>
+  <script>
+  window.addEventListener("load", function() {
 
-<script>
-  window.addEventListener("load", function () {
+    if (window.netlifyIdentity) {
 
-    if (!window.netlifyIdentity) {
-      console.log("Netlify Identity did not load.");
-      return;
-    }
-
-    window.netlifyIdentity.on("init", function () {
+      window.netlifyIdentity.init();
 
       const hash = window.location.hash;
 
@@ -28,10 +24,11 @@
         window.netlifyIdentity.open();
       }
 
-    });
+    }
 
   });
-</script>
+  </script>
+
 
   <style>
     * {
