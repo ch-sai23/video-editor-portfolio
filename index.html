@@ -11,26 +11,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/netlify-identity-widget@1.9.2/build/netlify-identity-widget.js"></script>
 
-<script>
-window.addEventListener("load", function () {
-  if (!window.netlifyIdentity) return;
 
-  window.netlifyIdentity.init();
-
-  window.netlifyIdentity.on("init", function () {
-    const hash = window.location.hash;
-
-    if (
-      hash.includes("recovery_token") ||
-      hash.includes("invite_token") ||
-      hash.includes("confirmation_token") ||
-      hash.includes("email_change_token")
-    ) {
-      window.netlifyIdentity.open();
-    }
-  });
-});
-</script>
 </head>
 <body>
   <div class="noise"></div>
